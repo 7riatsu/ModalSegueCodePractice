@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         button.setTitle("start Modal", for: UIControlState.normal)
         button.setTitleColor(UIColor.white, for: UIControlState.normal)
         button.sizeToFit()
-        button.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
+        button.center = CGPoint(x: self.view.center.x, y: label.frame.maxY + 30)
         button.addTarget(self, action: #selector(ViewController.didTouchButton(sender:)), for: UIControlEvents.touchUpInside)
         self.view.addSubview(button)
     }
