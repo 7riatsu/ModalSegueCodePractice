@@ -20,6 +20,13 @@ class ViewController: UIViewController {
         label.sizeToFit()
         label.center = self.view.center
         self.view.addSubview(label)
+        
+        let button = UIButton()
+        button.setTitle("start Modal"、for: UIControllerState.normal)
+        button.setTitleColor(UIColor.white, for: UIControllerState.normal)
+        button.sizeToFit()
+        button.center = CGPoint(x: self.view.center.x, y: self.view.center.y)
+        self.view.addSubview(button)
     }
 
     override func didReceiveMemoryWarning() {
