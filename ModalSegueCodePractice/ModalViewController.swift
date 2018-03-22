@@ -20,6 +20,14 @@ class ModalViewController: UIViewController {
         label.sizeToFit()
         label.center = self.view.center
         self.view.addSubview(label)
+        
+        let button = UIButton()
+        button.setTitle("hide Modal", for: UIControlState.normal)
+        button.setTitleColor(UIColor.white, for: UIControlState.normal)
+        button.sizeToFit()
+        button.center = CGPoint(x: self.view.center.x, y: label.frame.maxY + 60)
+        button.addTarget(self, action: #selector(ModalViewController.didTouchButton(sender:)), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,14 +36,8 @@ class ModalViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func didTouchButton(sender: UIButton){
+        self.dismiss(animated: true, completion: { () -> Void in })
     }
-    */
 
 }
