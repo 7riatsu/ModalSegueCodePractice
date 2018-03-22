@@ -12,8 +12,14 @@ class ModalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(red: 1.0, green: 153.0 / 255, blue: 0.0, alpha: 1.0)
+        let label = UILabel()
+        label.text = "ModalViewController"
+        label.textColor = UIColor.white
+        label.font = UIFont(name: "HirakakuProN-W6", size: 20)
+        label.sizeToFIt()
+        label.center = self.view.center
+        self.view.addSubview(label)
     }
 
     override func didReceiveMemoryWarning() {

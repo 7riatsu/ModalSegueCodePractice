@@ -12,7 +12,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.view.bacdgroundColor = UIColor(red: 0.0, green: 102.0 / 255, blue: 204.0 / 255, alpha: 1.0)
+        let label = UILabel()
+        label.text = "MainViewController"
+        label.textColor = UIColor.white
+        label.font = UIFont(name: "HirakabuProN-W6", size: 20)
+        label.sizeToFit()
+        label.center = self.view.center
+        self.view.addSubview(label)
     }
 
     override func didReceiveMemoryWarning() {
