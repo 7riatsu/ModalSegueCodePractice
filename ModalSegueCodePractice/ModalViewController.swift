@@ -17,7 +17,7 @@ class ModalViewController: UIViewController {
         label.text = "ModalViewController"
         label.textColor = UIColor.white
         label.font = UIFont(name: "HirakakuProN-W6", size: 20)
-        label.sizeToFIt()
+        label.sizeToFit()
         label.center = self.view.center
         self.view.addSubview(label)
     }
